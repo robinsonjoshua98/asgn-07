@@ -17,28 +17,28 @@
 
 	include('inc-game-character-object.php');
 
-	$playerName = $_POST["playerName"];
-	$score = $_POST["score"];
+	$player1 = new GameCharacter();
+	$player2 = new GameCharacter();
 
-	$order = new Order();
+	$player1->setPlayerName('Billy');
+	$player2->setPlayerName('Billy');
 
-	$itemCost = setItemCost($cost);
-	$numItems = setNumItems($items);
-	$subTotal = getSubTotal();
-	$tax = getSalesTax();
-	$shippingHandling = getShippingHandling;
-	$total= getTotal;
+	$player1->setScore(100);
+	$player2->setScore(99);
 
+	
+	if ($player1->getScore() > $player2->getScore()) {
+			echo "Player 1 wins" ;
+	}  elseif ($player1->getScore() < $player2->getScore()) {
+		echo "Player 2 wins";
+	}    else {
+		echo "Tie";
+	}
 
 	
 	
 	// you can change the variables in the table if you need to use different names
-	print("	<table>
-			<tr><td>Sub-Total:</td><td>$subTotal</td></tr>
-			<tr><td>Tax:</td><td>$tax</td></tr>
-			<tr><td>Shipping and Handling:</td><td>$shippingHandling</td></tr>
-			<tr><td>TOTAL:</td><td>$total</td></tr>
-			</table>");
+	
 ?>
 </body>
 </html>

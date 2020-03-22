@@ -15,7 +15,7 @@
 	<h1>Software Order</h1>
 <?php
 
-	include('inc-order-object.php');
+	include("inc-order-object.php");
 
 	$cost = $_POST["cost"];
 	$item = $_POST["items"];
@@ -26,8 +26,8 @@
 	$numItems = setNumItems($items);
 	$subTotal = getSubTotal();
 	$tax = getSalesTax();
-	$shippingHandling = getShippingHandling;
-	$total= getTotal;
+	$shippingHandling = getShippingHandling();
+	$total= getTotal();
 
 
 	

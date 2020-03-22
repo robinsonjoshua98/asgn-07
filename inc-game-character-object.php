@@ -1,7 +1,8 @@
 <?php 
 
-class Character 
-{
+class GameCharacter {
+    
+    
     private $playerName; 
     private $score;
 
@@ -21,7 +22,7 @@ public function getScore()
     return $this->score;
 }
  
-public function setScore() 
+public function setScore($score) 
 {
     $this->score = $score;
 }

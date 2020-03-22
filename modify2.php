@@ -38,7 +38,7 @@
 		for ($hourlyWage = 8.00; $hourlyWage < 25.00; $hourlyWage = $hourlyWage + 1)
 		{
 			$newHourlyWage = getNewHourlyWage($hourlyWage, $payIncrease);
-			print("<tr><td>$$hourlyWage</td><td>$$newHourlyWage</td></tr>");
+			print("<tr><td>$$hourlyWage</td><td>$ ".number_format($newHourlyWage, 2)."</td></tr>");
 		}
 		print ("</table");
 	?>
